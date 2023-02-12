@@ -1,0 +1,3 @@
+package com.teststudio.currencyconverter.network.request
+
+class CurrencyListRequest

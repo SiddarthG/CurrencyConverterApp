@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="data"
+            type="com.teststudio.currencyconverter.data.uimodel.Currency" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/dimen_margin_5dp"
+        app:cardBackgroundColor="@android:color/white"
+        android:layout_margin="@dimen/dimen_margin_8dp"
+        app:cardElevation="@dimen/dimen_margin_8dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/symbol"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/dimen_text_21sp"
+                tools:text="Title"
+                android:text="@{data.symbol}"
+                android:layout_marginStart="@dimen/dimen_margin_8dp"
+                android:layout_marginEnd="@dimen/dimen_margin_8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/rate"
+                tools:text="Desc"
+                android:text="@{data.rate}"
+                android:textSize="@dimen/dimen_text_18sp"
+                android:layout_marginStart="@dimen/dimen_margin_8dp"
+                android:layout_marginEnd="@dimen/dimen_margin_8dp"
+                android:layout_marginBottom="@dimen/dimen_margin_10dp" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</layout>
